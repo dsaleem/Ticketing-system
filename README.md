@@ -1,6 +1,6 @@
 # Ticketing-system
 Trouble ticketing system
-# README
+
 ## User Stories
 
 A Manager of a xyz IT company wants to have a trouble ticketing system to streamline the complaints raise by end user and to reduce the response time by his staff
@@ -10,8 +10,8 @@ A Manager of a xyz IT company wants to have a trouble ticketing system to stream
 - Each tasks when assign to team needs a track of when the task is assinged and when the task is completed 
 
 ### Tasks. 
-In order to assing task to IT member , I need to create a task with a name so that it can be identified in our system
-In order to know who created the ticket , I need to assign his/her name as an owner of the ticket.
+- In order to assing task to IT member , I need to create a task with a name so that it can be identified in our system
+- In order to know who created the ticket , I need to assign his/her name as an owner of the ticket.
 
 ### Description. 
 - In order to know the details of issue end user is facing , I need to record the details of the problem. 
