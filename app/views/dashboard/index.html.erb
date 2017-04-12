@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>High Priority Tickets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tasks</th>
+      <th>Description</th>
+      <th>Priority</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @high.each do |h| %>
+      <tr>
+        <td><%= h.Tasks %></td>
+        <td><%= h.Description %></td>
+        <td><%= h.Priority %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+    
+
+<%= link_to 'New Ticket', new_ticket_path %>
