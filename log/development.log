@@ -839,3 +839,262 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2017-04-12 10:46:26 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (6.7ms)
+Completed 200 OK in 41ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-12 10:49:55 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (7.2ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tickets" for ::1 at 2017-04-12 10:50:03 +1000
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (1.4ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered tickets/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 584ms (Views: 571.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-04-12 10:50:20 +1000
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.6ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."priority" = ?[0m  [["priority", :high]]
+  Rendered dashboard/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tickets/new" for ::1 at 2017-04-12 10:50:26 +1000
+Processing by TicketsController#new as HTML
+  Rendering tickets/new.html.erb within layouts/application
+  Rendered tickets/_form.html.erb (33.6ms)
+  Rendered tickets/new.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tickets" for ::1 at 2017-04-12 10:50:55 +1000
+Processing by TicketsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OdwckX/7facUHyWL9bpQ1fLsdH0sBhEmFxypRWDV1SwSf4ym4qE2MRtgpXOuDRP7GhR/so4tICEBlE5wJV/A9w==", "ticket"=>{"Tasks"=>"Craig PC", "Description"=>"slow browsing", "Priority"=>"high", "Starttime"=>"1:00pm", "Finishtime"=>"2:00pm"}, "commit"=>"Create Ticket"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "tickets" ("Tasks", "Description", "Priority", "Starttime", "Finishtime", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["Tasks", "Craig PC"], ["Description", "slow browsing"], ["Priority", "high"], ["Starttime", "1:00pm"], ["Finishtime", "2:00pm"], ["created_at", 2017-04-12 00:50:55 UTC], ["updated_at", 2017-04-12 00:50:55 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tickets/4
+Completed 302 Found in 10ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/tickets/4" for ::1 at 2017-04-12 10:50:55 +1000
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tickets/show.html.erb within layouts/application
+  Rendered tickets/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tickets" for ::1 at 2017-04-12 10:50:58 +1000
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered tickets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-04-12 10:51:08 +1000
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."priority" = ?[0m  [["priority", :high]]
+  Rendered dashboard/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ticket" for ::1 at 2017-04-12 10:53:36 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ticket"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (11.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (131.9ms)
+Started GET "/dashboard" for ::1 at 2017-04-12 10:53:59 +1000
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."priority" = ?[0m  [["priority", :high]]
+  Rendered dashboard/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 264ms (Views: 252.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tickets" for ::1 at 2017-04-12 10:54:01 +1000
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered tickets/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tickets" for ::1 at 2017-04-12 10:54:07 +1000
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered tickets/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard/eee" for ::1 at 2017-04-12 10:54:59 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard/eee"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (87.2ms)
+Started GET "/tickets" for ::1 at 2017-04-12 10:55:21 +1000
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.5ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered tickets/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-04-12 10:55:30 +1000
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.2ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets" WHERE "tickets"."priority" = ?[0m  [["priority", :high]]
+  Rendered dashboard/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tickets" for ::1 at 2017-04-12 10:55:32 +1000
+Processing by TicketsController#index as HTML
+  Rendering tickets/index.html.erb within layouts/application
+  [1m[36mTicket Load (0.3ms)[0m  [1m[34mSELECT "tickets".* FROM "tickets"[0m
+  Rendered tickets/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tickets/jhgfdfgh" for ::1 at 2017-04-12 10:56:04 +1000
+Processing by TicketsController#show as HTML
+  Parameters: {"id"=>"jhgfdfgh"}
+  [1m[36mTicket Load (0.1ms)[0m  [1m[34mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Ticket with 'id'=jhgfdfgh):
+  
+app/controllers/tickets_controller.rb:67:in `set_ticket'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.2ms)
+Started GET "/dashboards" for ::1 at 2017-04-12 10:56:13 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/dashboards"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (5.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (89.7ms)
